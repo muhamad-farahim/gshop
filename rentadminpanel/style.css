@@ -1,0 +1,30 @@
+.search__box {
+    padding-right: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(211, 211, 211);
+}
+.search__box i {
+    padding-left: 5px;
+}
+
+.search__box input {
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    height: 20px;
+    font-weight: 700;
+    background-color:rgb(211, 211, 211) ;
+}
+.bg-light-green {
+    background-color: rgb(145, 255, 145);
+    color: kode warna buat text;
+}
+.__table {
+    overflow-x: auto;
+}
+

@@ -1,0 +1,299 @@
+@use '../abstract/variables'as v;
+
+
+.hr {
+    width: 100%;
+    height: 1.5px;
+    background-color: rgba($color: #000000, $alpha: 1);
+}
+
+.circle {
+
+    width: 130px;
+    height: 130px;
+    background-color: #333;
+    margin: 30px 0;
+    border-radius: 50%;
+
+}
+
+.testbox {
+    height: 300px;
+    background-color: blue;
+    border: 1px solid black;
+}
+
+.rentcheck {
+
+    &__itemlist-details {
+
+        text-align: left;
+
+        font-size: 18px;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    &__itemlist-detail {
+
+        input {
+
+            width: 40px;
+            border-radius: 8px;
+            margin-right: 10px;
+            border: 1px solid rgba($color: #000000, $alpha: .5);
+        }
+    }
+
+
+    &__itemsmalltitle {
+
+        display: none;
+
+        h1 {
+            margin: 0;
+            // font-size: 20px;
+
+        }
+
+    }
+
+    &__itemlist-imgbox {
+        width: 400px;
+        height: 400px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__itemlist-totalprice {
+        // display: grid;
+        // justify-content: end;
+    }
+
+    &__itemlist-grid {
+        display: grid;
+        grid-template-rows: 1fr 5fr 1fr;
+    }
+
+    &__itembox {
+        min-height: 450px;
+        border-bottom: 1px solid black;
+
+    }
+
+    &__itemlist {
+
+        min-height: 100px;
+    }
+
+    // itemlist
+
+    &__btncon {
+        width: 92%;
+    }
+
+    &__orderdetail {
+        width: 200px;
+        // display: flex;
+        justify-content: center;
+        text-align: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &__orderdetailtitle {
+        p {
+            font-weight: 500;
+            font-size: 25px;
+        }
+    }
+
+    &__orderdetailnum {
+        margin: 30px 0;
+
+        p {
+
+            font-size: 40px;
+        }
+    }
+
+    &__itemdetail {
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+
+    // itemdetail
+
+    &__addressinfo {
+        font-size: 25px;
+        margin: 40px 0;
+        font-weight: 400;
+    }
+
+    &__addresstitle {
+        font-weight: 600;
+    }
+
+    &__emailname {
+        font-weight: 500;
+        font-size: 25px;
+    }
+
+    &__profilebox {
+        width: 100%;
+    }
+
+    &__maintitle {
+        h1 {
+            margin-left: 25px !important;
+            margin: 20px 0;
+        }
+    }
+
+    &__con {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+
+    &__link {
+
+        font-weight: 400;
+
+        &--active {
+            font-weight: 400;
+            text-decoration: underline;
+        }
+    }
+
+    &__linkbox {
+        margin: 40px 0;
+    }
+
+    // &__uabox {
+    // height: 400px;
+    // display: none;
+    // }
+
+    &__line {
+        position: relative;
+
+        &::before {
+
+            content: "";
+            width: 1.5px;
+            height: 95%;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: .5;
+        }
+    }
+
+    &__itemlist-variantbox {
+
+        height: 40px;
+        width: 40px;
+        background-color: #ddd;
+    }
+
+    &__itemlist-variant {
+
+        input {
+            width: 150px;
+            max-height: 30px;
+        }
+    }
+
+    &__itemlist-variant {
+
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    &__linka {
+        text-decoration: none;
+    }
+}
+
+
+@media(max-width: 1200px) {
+
+
+    .rentcheck {
+
+        &__itemlist-imgbox {
+            width: 300px;
+            height: 300px;
+        }
+
+
+        &__itemlist-title {
+            display: none
+        }
+
+        &__itemsmalltitle {
+            display: block;
+
+            margin: 30px;
+            text-align: center;
+        }
+
+        &__itemlist-details {
+            margin: 50px auto;
+        }
+    }
+
+
+}
+
+@media(max-width : v.$tabletbreakpointlg) {
+    .rentcheck {
+
+        &__line {
+
+            &::before {
+                top: 0;
+                height: 1px;
+                width: 95%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media(max-width : v.$tabletbreakpointxs) {
+    .rentcheck {
+
+        &__itemlist-imgbox {
+            width: 200px;
+            height: 200px;
+        }
+
+        &__itembox {
+            min-height: 600px;
+            max-height: 800px;
+        }
+
+
+        &__itemlist-details {
+            font-size: 16px;
+        }
+
+        &__uabox {
+            border-bottom: 1px solid black;
+        }
+    }
+}

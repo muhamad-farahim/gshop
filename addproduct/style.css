@@ -1,0 +1,141 @@
+.hr {
+  width: 90%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.hr2 {
+  width: 90%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hr3 {
+  width: 90%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+#photoinput {
+  height: 300px;
+  border-radius: 8px;
+  position: relative;
+}
+#photoinput div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#photoinput p {
+  font-size: 50px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+
+.addproduct__cardcon {
+  margin: 50px auto;
+  width: 75%;
+}
+.addproduct__cardtitle {
+  font-weight: 500;
+}
+.addproduct__cardtitle p {
+  margin: 12px 0;
+  font-size: 25px;
+}
+.addproduct__cardform {
+  width: 650px;
+}
+.addproduct__input {
+  margin: 25px 0;
+}
+.addproduct__input label {
+  font-size: 23px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.addproduct__input input {
+  height: 50px;
+  border-radius: 8px;
+}
+.addproduct__cardvar {
+  max-width: 850px;
+}
+.addproduct__var {
+  min-width: 250px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  border-radius: 15px;
+  background-color: #FFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.addproduct__varphoto {
+  background-color: red;
+  border-radius: 15px;
+}
+.addproduct__vartitle {
+  padding: 20px;
+}
+.addproduct__vartitle p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.addproduct__desc {
+  width: 800px;
+}
+.addproduct__desctitle {
+  font-weight: 500;
+}
+.addproduct__desctitle p {
+  margin: 12px 0;
+  font-size: 25px;
+  text-align: center;
+}
+.addproduct__desccon {
+  margin: 50px auto;
+  width: 75%;
+}
+.addproduct__descbody textarea {
+  width: 100%;
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  .addproduct__desccon {
+    margin: 50px auto;
+    width: 95%;
+  }
+}
+@media (max-width: 576px) {
+  .addproduct__cardtitle p {
+    margin: 6px 0;
+    font-size: 20px;
+  }
+  .addproduct__input {
+    margin: 30px 0;
+  }
+  .addproduct__input label {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  .addproduct__input input {
+    height: 50px;
+    border-radius: 8px;
+  }
+  .addproduct__var {
+    min-width: 200px;
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

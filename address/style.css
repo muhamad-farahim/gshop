@@ -1,0 +1,101 @@
+/* No CSS *//*# sourceMappingURL=style.css.map */
+.signup-str-border {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+  }
+  
+  .hr {
+    height: 1px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .input label {
+    display: block;
+  }
+  
+  .signupp h1 {
+    font-size: 30px;
+  }
+  .signupp .input label {
+    font-weight: 500;
+    padding: 2px;
+    font-size: 22px;
+  }
+  .signupp .input textarea {
+    font-size: 20px;
+  }
+  .signupp select {
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    outline: none;
+    border: none;
+  }
+  .signupp__inputbox {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  .signupp__inputbox input {
+    outline: none;
+    border: none;
+    font-size: 15px;
+    height: 40px;
+  }
+  .signupp__inputbox i::before {
+    font-size: 28px;
+    margin-right: 8px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  @media (min-width: 768px) {
+    .signup-str-border {
+      position: relative;
+      border-top: none;
+    }
+    .signup-str-border::before {
+      content: "";
+      width: 0.5px;
+      height: 80%;
+      background-color: #000;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.5;
+    }
+  
+    .signupp .inputs {
+      display: flex;
+      justify-content: center;
+    }
+    .signupp .input {
+      width: 90%;
+      margin-left: 20px !important;
+    }
+    .signupp__inputbox {
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      height: 50px;
+    }
+    .signupp__inputbox input {
+      outline: none;
+      border: none;
+      font-size: 22px;
+      height: 40px;
+      width: 100%;
+    }
+    .signupp__inputbox i::before {
+      font-size: 28px;
+      margin-right: 8px;
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  

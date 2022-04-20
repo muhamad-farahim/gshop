@@ -1,0 +1,128 @@
+.profilee {
+  margin: 40px 0;
+  position: relative;
+}
+.profilee__changepasstitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+.profilee__content_title {
+  padding: 20px;
+}
+.profilee-label {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profilee__nav {
+  display: none;
+}
+.profilee__navcard {
+  height: 600px;
+  background-color: #fff;
+  width: 100%;
+}
+.profilee__contentcard {
+  width: 100%;
+}
+.profilee__link {
+  margin: 40px 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.profilee__storelink {
+  color: #02C0FC;
+  text-decoration: underline;
+}
+.profilee .inputs {
+  display: flex;
+  justify-content: center;
+}
+.profilee .input {
+  width: 90%;
+  margin-left: 20px !important;
+}
+.profilee select {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+.profilee__inputbox {
+  width: 90%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  max-width: 430px;
+}
+.profilee__inputbox input {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  height: 30px;
+  width: 90%;
+}
+.profilee__inputbox i::before {
+  font-size: 24px;
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.hr {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  margin: 20px 0;
+}
+
+@media (min-width: 300px) {
+  .profilee__inputbox {
+    height: 50px;
+  }
+  .profilee input {
+    font-size: 17px;
+  }
+}
+@media (min-width: 768px) {
+  .profilee .inputs {
+    display: flex;
+    justify-content: center;
+  }
+  .profilee .input {
+    width: 90%;
+    margin-left: 20px !important;
+  }
+  .profilee__inputbox {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  .profilee__inputbox input {
+    outline: none;
+    border: none;
+    font-size: 22px;
+    height: 40px;
+    width: 100%;
+  }
+  .profilee__inputbox i::before {
+    font-size: 28px;
+    margin-right: 8px;
+    color: rgba(0, 0, 0, 0.2);
+  }
+}
+@media (min-width: 992px) {
+  .profilee__nav {
+    display: block;
+  }
+  .profilee__navcard {
+    position: sticky;
+    top: 100px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

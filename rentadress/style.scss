@@ -1,0 +1,133 @@
+@use '../abstract//variables'as v;
+
+.signup-str-border{
+    border-top: 1px solid rgba(0, 0, 0, .25);
+    // border: none;
+}
+.hr{
+    height: 1px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.input{
+
+    label{
+        display: block;
+    }
+}
+
+.signupp{
+    
+    h1{
+        font-size: 30px;
+    }
+
+    .input{
+        
+        
+        label{
+            font-weight: 500;
+            padding: 2px;
+            font-size: 22px;
+        }
+        textarea{
+            font-size: 20px;
+        }
+    }
+
+    select{
+        width: 100%;
+        height: 100%;
+        font-size: 22px;
+        outline: none;
+        border: none;
+    }
+
+    &__inputbox{
+            width: 100%;
+            border: 1px solid rgba($color: #000000, $alpha: .25);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+
+            input{
+                outline: none;
+                border: none;
+                font-size: 20px;
+                height: 40px;
+            }
+
+            
+
+            & i::before{
+                font-size: 28px;
+                margin-right: 8px;
+                color: rgba($color: #000000, $alpha: .5);
+            }
+    }
+    &__linka {
+        text-decoration: none;
+    }
+ 
+    
+}
+
+
+@media(min-width: v.$tabletbreakpointmd){
+
+    .signup-str-border{
+
+        position: relative;
+        border-top: none;
+
+        &::before{
+
+            content: "";
+            width: .5px;
+            height: 80%;
+            background-color: #000;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: .5;
+        }
+    }
+
+    .signupp{
+
+        .inputs{
+            display: flex;
+            justify-content: center;
+        }
+
+        .input{
+            width: 90%;
+            margin-left: 20px  !important;
+        }
+        
+
+        &__inputbox{
+            width: 100%;
+            border: 1px solid rgba($color: #000000, $alpha: .25);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+
+            input{
+                outline: none;
+                border: none;
+                font-size: 22px;
+                height: 40px;
+                width: 100%;
+            }
+
+            & i::before{
+                font-size: 28px;
+                margin-right: 8px;
+                color: rgba($color: #000000, $alpha: .2);
+            }
+    }
+    }
+}

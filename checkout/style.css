@@ -1,0 +1,194 @@
+.hr {
+  width: 100%;
+  height: 1.5px;
+  background-color: black;
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  background-color: #333;
+  margin: 30px 0;
+  border-radius: 50%;
+}
+
+.testbox {
+  height: 300px;
+  background-color: blue;
+  border: 1px solid black;
+}
+
+.rentcheck__itemlist-details {
+  text-align: left;
+  font-size: 18px;
+}
+.rentcheck__itemlist-details span {
+  font-weight: bold;
+}
+.rentcheck__itemlist-detail input {
+  width: 40px;
+  border-radius: 8px;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.rentcheck__itemsmalltitle {
+  display: none;
+}
+.rentcheck__itemsmalltitle h1 {
+  margin: 0;
+}
+.rentcheck__itemlist-imgbox {
+  width: 400px;
+  height: 400px;
+}
+.rentcheck__itemlist-imgbox img {
+  height: 100%;
+}
+.rentcheck__itemlist-grid {
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+.rentcheck__itembox {
+  min-height: 450px;
+  border-bottom: 1px solid black;
+}
+.rentcheck__itemlist {
+  min-height: 100px;
+}
+.rentcheck__btncon {
+  width: 92%;
+}
+.rentcheck__orderdetail {
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.rentcheck__orderdetailtitle p {
+  font-weight: 500;
+  font-size: 25px;
+}
+.rentcheck__orderdetailnum {
+  margin: 30px 0;
+}
+.rentcheck__orderdetailnum p {
+  font-size: 40px;
+}
+.rentcheck__itemdetail {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.rentcheck__addressinfo {
+  font-size: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+.rentcheck__addresstitle {
+  font-weight: 600;
+}
+.rentcheck__emailname {
+  font-weight: 500;
+  font-size: 25px;
+}
+.rentcheck__profilebox {
+  width: 100%;
+}
+.rentcheck__maintitle h1 {
+  margin-left: 25px !important;
+  margin: 20px 0;
+}
+.rentcheck__con {
+  width: 90%;
+  margin: 0 auto;
+}
+.rentcheck__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+.rentcheck__link {
+  font-weight: 400;
+}
+.rentcheck__link--active {
+  font-weight: 400;
+  text-decoration: underline;
+}
+.rentcheck__linkbox {
+  margin: 40px 0;
+}
+.rentcheck__line {
+  position: relative;
+}
+.rentcheck__line::before {
+  content: "";
+  width: 1.5px;
+  height: 95%;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+.rentcheck__itemlist-variantbox {
+  height: 40px;
+  width: 40px;
+  background-color: #ddd;
+}
+.rentcheck__itemlist-variant input {
+  width: 150px;
+  max-height: 30px;
+}
+.rentcheck__itemlist-variant {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.rentcheck__linka {
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .rentcheck__itemlist-imgbox {
+    width: 300px;
+    height: 300px;
+  }
+  .rentcheck__itemlist-title {
+    display: none;
+  }
+  .rentcheck__itemsmalltitle {
+    display: block;
+    margin: 30px;
+    text-align: center;
+  }
+  .rentcheck__itemlist-details {
+    margin: 50px auto;
+  }
+}
+@media (max-width: 992px) {
+  .rentcheck__line::before {
+    top: 0;
+    height: 1px;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 576px) {
+  .rentcheck__itemlist-imgbox {
+    width: 200px;
+    height: 200px;
+  }
+  .rentcheck__itembox {
+    min-height: 600px;
+    max-height: 800px;
+  }
+  .rentcheck__itemlist-details {
+    font-size: 16px;
+  }
+  .rentcheck__uabox {
+    border-bottom: 1px solid black;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
