@@ -7,7 +7,6 @@ class Product
 
     function __construct(int $id, string $name, ?int $price, ?int $user_fk, ?int $stock, string $description)
     {
-
         $this->id = $id;
         $this->name = $name;
         $this->price = $price;
@@ -45,6 +44,21 @@ class Product
         $data = mysqli_fetch_assoc($q);
 
         return $data;
+    }
+
+    function get_user_name()
+    {
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+
+        $sql = "SELECT `name` FROM  user WHERE id = $this->user_fk";
+
+        $q = mysqli_query($CONNECTION, $sql);
+
+        $name = mysqli_fetch_assoc($q)['name'];
+
+
+        return $name;
     }
 
     //AMBIL SEMUA FOTO PRODUCT

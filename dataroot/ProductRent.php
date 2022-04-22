@@ -22,7 +22,7 @@ class ProductRent
 
         $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
 
-        $sql = "SELECT * FROM variant WHERE product_rent_fk = $this->id;";
+        $sql = "SELECT * FROM product_rent_variant WHERE product_rent_fk = $this->id;";
         $q = mysqli_query($CONNECTION, $sql);
         $arr = [];
 
@@ -45,6 +45,21 @@ class ProductRent
         $data = mysqli_fetch_assoc($q);
 
         return $data;
+    }
+    //MENGANMBIL USERNAME PENJUAL
+    function get_user_name()
+    {
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+
+        $sql = "SELECT `name` FROM  user WHERE id = $this->user_fk";
+
+        $q = mysqli_query($CONNECTION, $sql);
+
+        $name = mysqli_fetch_assoc($q)['name'];
+
+
+        return $name;
     }
 
     //AMBIL SEMUA FOTO PRODUCT RENT

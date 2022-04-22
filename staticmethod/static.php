@@ -1,14 +1,14 @@
 <?php
-session_start();
+// session_start();
 
 // spl_autoload_register(function ($class) {
 
 //     require_once('../dataroot/' . $class . 'php');
 // });
 
-require_once './dataroot/UserManager.php';
+// require_once './dataroot/UserManager.php';
 
-require_once './tools.php';
+// require_once './tools.php';
 
 class Authentication
 {

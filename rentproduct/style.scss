@@ -1,69 +1,99 @@
-.productsscard{
+.productsscard {
     margin: 0 auto;
     max-width: 282px;
+    // display: none;
 
-    &__maincard{
-        
+    &__linka {
 
-        p{
-            font-size: 22px;
-            
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+            color: #000;
         }
     }
-    &__element{
+
+    .max-photop {
+        max-height: 200px;
+    }
+
+    &__maincard {
+
+
+        p {
+            font-size: 22px;
+
+        }
+    }
+
+    &__element {
         display: flex;
         align-items: center;
-        
+
     }
-    &__variant{
-        .v-1{
+
+    &__variant {
+        .v-1 {
             background-color: #316BFF;
         }
-        .v-2{
+
+        .v-2 {
             background-color: #FF4444;
         }
-        .v-3{
+
+        .v-3 {
             background-color: #41EB70;
         }
-        .v-4{
+
+        .v-4 {
             background-color: #10E2FF;
         }
     }
-    &__variant-box{
+
+    &__variant-box {
         width: 40px;
         height: 40px;
 
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
     }
-    &__usertext{
+
+    &__usertext {
         margin-left: 5px;
         font-size: 12px;
         font-weight: 500;
     }
-    &__imgbox{
+
+    &__imgbox {
         width: 35px;
         height: 35px;
         border-radius: 50%;
         overflow: hidden;
 
-        img{
+        img {
             height: 100%;
         }
     }
 
-    &__rating{
-        p{
+    &__rating {
+        p {
             font-size: 12px;
             margin-left: 5px;
             font-weight: 500;
         }
     }
-    &__stock{
-        
-        p{
+
+    &__stock {
+
+        p {
             font-size: 12px;
             font-weight: 500;
         }
-        .progress{
+
+        .progress {
             height: 5px;
         }
     }
@@ -71,41 +101,42 @@
 
 .starr {
     position: relative;
-    
+
     display: inline-block;
     width: 0;
     height: 0;
-    
+
     margin-left: .9em;
     margin-right: .9em;
     margin-bottom: 1.2em;
-    
-    border-right:  .3em solid transparent;
-    border-bottom: .7em  solid #FC0;
-    border-left:   .3em solid transparent;
-  
+
+    border-right: .3em solid transparent;
+    border-bottom: .7em solid #FC0;
+    border-left: .3em solid transparent;
+
     /* Controlls the size of the stars. */
     font-size: 10px;
-    
-    &:before, &:after {
-      content: '';
-      
-      display: block;
-      width: 0;
-      height: 0;
-      
-      position: absolute;
-      top: .6em;
-      left: -1em;
-    
-      border-right:  1em solid transparent;
-      border-bottom: .7em  solid #FC0;
-      border-left:   1em solid transparent;
-    
-      transform: rotate(-35deg);
+
+    &:before,
+    &:after {
+        content: '';
+
+        display: block;
+        width: 0;
+        height: 0;
+
+        position: absolute;
+        top: .6em;
+        left: -1em;
+
+        border-right: 1em solid transparent;
+        border-bottom: .7em solid #FC0;
+        border-left: 1em solid transparent;
+
+        transform: rotate(-35deg);
     }
-    
-    &:after {  
-      transform: rotate(35deg);
+
+    &:after {
+        transform: rotate(35deg);
     }
-  }
+}

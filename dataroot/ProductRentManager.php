@@ -1,7 +1,7 @@
 <?php
 
-require_once './tools.php';
-require_once './staticmethod/static.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/tools.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/staticmethod/static.php');
 
 class ProductRentManager
 {
