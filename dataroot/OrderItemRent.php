@@ -44,4 +44,23 @@ class OrderItemRent
 
         return $summ;
     }
+
+
+    function get_total_items()
+    {
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+
+        $sql = "SELECT quantity FROM order_rent_variant WHERE orderrent_item_fk = $this->id";
+
+        $q = mysqli_query($CONNECTION, $sql);
+
+        $summ = 0;
+        while ($data = mysqli_fetch_assoc($q)) {
+
+            $summ += intval($data);
+        }
+
+        return $summ;
+    }
 }
