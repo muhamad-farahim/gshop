@@ -1,6 +1,8 @@
 <?php
 
 
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop' . '/tools.php');
+
 class OrderItemRent
 {
 
@@ -21,14 +23,24 @@ class OrderItemRent
 
         $sql = "SELECT quantity FROM order_rent_variant WHERE orderrent_item_fk = $this->id";
 
+        $psql = "SELECT priceperday FROM product_rent WHERE id = $this->id";
+
+        $price = mysqli_fetch_assoc(mysqli_query($CONNECTION, $psql));
+
         $q = mysqli_query($CONNECTION, $sql);
 
-        $summ = 0;
+        $days = intervaltodays($this->year, $this->month, $this->day);
+
+        $quantityy = 0;
 
         while ($data = mysqli_fetch_assoc($q)) {
 
-            $summ += intval($data);
+            $quantityy += intval($data);
         }
+
+        $dayprice = $days * $price;
+
+        $summ = $dayprice * $quantityy;
 
         return $summ;
     }

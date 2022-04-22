@@ -198,3 +198,15 @@ function verifyuserid(int $id, bool $redirect = false)
         }
     }
 }
+
+
+function intervaltodays(int $Y = 0, int $M = 0, int $D = 0)
+{
+
+
+    $duration = new DateInterval("P" . $Y . "Y" . $M . "M" . $D . "D");
+
+    $durationinseconds = (new DateTime())->setTimestamp(0)->add($duration)->getTimestamp();
+
+    return $durationinseconds / 86400;
+}

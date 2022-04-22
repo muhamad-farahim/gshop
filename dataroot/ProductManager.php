@@ -1,7 +1,11 @@
 <?php
 
-require_once './tools.php';
-require_once './staticmethod/static.php';
+spl_autoload_register(function ($class) {
+
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/staticmethod/static.php');
+});
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop' . '/tools.php');
 
 class ProductManager
 {
@@ -32,7 +36,7 @@ class ProductManager
     }
 
     //ambil salah satu product di database
-    static function get($id)
+    static function get(int $id)
     {
 
 

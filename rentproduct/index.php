@@ -274,7 +274,7 @@ if (isset($_SESSION['userid'])) {
 
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-0">
 
-                        <a class="productsscard__linka" href="../product-rent-detail/">
+                        <a class="productsscard__linka" href="../product-rent-detail/?pid=<?php echo $pr->id ?>">
                             <div class="card productsscard">
 
                                 <img src="../uploadedimg/<?php echo $pr->get_photo()['img'] ?>" alt="" class="card-img-top max-photop">

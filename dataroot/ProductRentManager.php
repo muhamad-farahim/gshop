@@ -32,7 +32,7 @@ class ProductRentManager
     }
 
     //ambil salah satu product rent di database
-    static function get($id)
+    static function get(int $id)
     {
 
 
