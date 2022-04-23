@@ -1,6 +1,12 @@
 <?php
 
-require_once './staticmethod/static.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/staticmethod/static.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/tools.php');
+
+
+// require_once '../staticmethod/static.php';
+
+
 
 
 class OrderRentManager
@@ -84,6 +90,44 @@ class OrderRentManager
             $data = mysqli_fetch_assoc($q);
 
             return Converter::OrderRentConverter($data);
+        }
+    }
+
+    static function checkout_order(object $ord)
+    {
+
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+        $objar = $ord->get_items();
+
+        $ok = 1;
+
+        foreach ($objar as $obj) {
+
+            $totaldec = intval($obj->get_total_items()) - intval(ProductRentManager::get($obj->product_fk)['stock']);
+
+            $sql = "UPDATE product_rent SET stock = $totaldec WHERE id = $obj->id";
+
+            $q = mysqli_query($CONNECTION, $sql);
+
+            if (!$q) {
+                $ok = 0;
+            }
+        }
+
+        if ($ok) {
+
+            $randomNum = randomGen(0, 10, 10);
+
+            $invo = "$randomNum" . time();
+
+            $ord->invoie = $invo;
+
+            $ord->save();
+
+            return 1;
+        } else {
+            return 0;
         }
     }
 }

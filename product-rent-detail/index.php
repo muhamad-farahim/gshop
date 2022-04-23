@@ -1,23 +1,29 @@
 <?php
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 69b8912e618e2057353de0fa95678775c79cec2f
 spl_autoload_register(function ($class) {
 
     require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop' .  '//dataroot/' . $class . '.php');
 });
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop' . '/tools.php');
 
 
 if (isset($_GET['pid'])) {
 
-    $pobj = ProductRentManager::get(intval($_GET['pid']));
 
-    if (!$pobj) header("location: http://localhost/impproject/gshop/where.php");
+    $pobj = ProductRentManager::get($_GET['pid']);
 } else {
-    header("location: http://localhost/impproject/gshop/where.php");
 
+    header("location: http://localhost/impproject/gshop/where.php");
+<<<<<<< HEAD
+
+=======
+>>>>>>> 69b8912e618e2057353de0fa95678775c79cec2f
 }
+
 
 ?>
 
@@ -39,6 +45,7 @@ if (isset($_GET['pid'])) {
 
 <body>
 
+<<<<<<< HEAD
 <!-- NAV STARTS HERE -->
 
 <?php include_once '../template/navbar.php'; ?>
@@ -46,6 +53,13 @@ if (isset($_GET['pid'])) {
 
 
 <!-- NAV ENDS HERE -->
+=======
+    <!-- NAV STARTS HERE -->
+
+    <?php include_once '../template/navbar.php'; ?>
+
+    <!-- NAV ENDS HERE -->
+>>>>>>> 69b8912e618e2057353de0fa95678775c79cec2f
 
 
     <div class="container pdetaill my-5">

@@ -18,14 +18,20 @@ class OrderItem
 
         $sql = "SELECT quantity FROM order_variant WHERE order_item_fk = $this->id";
 
+        $psql = "SELECT price FROM product WHERE id = $this->id";
+
+        $price = mysqli_fetch_assoc(mysqli_query($CONNECTION, $psql));
+
         $q = mysqli_query($CONNECTION, $sql);
 
-        $summ = 0;
+        $quantityy = 0;
 
         while ($data = mysqli_fetch_assoc($q)) {
 
-            $summ += intval($data);
+            $quantityy += intval($data);
         }
+
+        $summ = $price * $quantityy;
 
         return $summ;
     }

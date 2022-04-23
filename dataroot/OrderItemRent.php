@@ -16,6 +16,25 @@ class OrderItemRent
         $this->day = $day;
     }
 
+
+    function get_product()
+    {
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+
+        $sql = "SELECT * FROM product_rent WHERE id = $this->product_fk";
+
+        $q = mysqli_query($CONNECTION, $sql);
+
+
+        if ($q) {
+            $data = mysqli_fetch_assoc($q);
+
+            // var_dump($data);
+            return $data;
+        }
+    }
+
     function get_total_price()
     {
 
@@ -23,7 +42,7 @@ class OrderItemRent
 
         $sql = "SELECT quantity FROM order_rent_variant WHERE orderrent_item_fk = $this->id";
 
-        $psql = "SELECT priceperday FROM product_rent WHERE id = $this->id";
+        $psql = "SELECT priceperday FROM product_rent WHERE id = $this->product_fk";
 
         $price = mysqli_fetch_assoc(mysqli_query($CONNECTION, $psql));
 
@@ -38,9 +57,30 @@ class OrderItemRent
             $quantityy += intval($data);
         }
 
-        $dayprice = $days * $price;
+
+
+        $dayprice = $days * intval($price);
 
         $summ = $dayprice * $quantityy;
+
+        return $summ;
+    }
+
+
+    function get_total_items()
+    {
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+
+        $sql = "SELECT quantity FROM order_rent_variant WHERE orderrent_item_fk = $this->id";
+
+        $q = mysqli_query($CONNECTION, $sql);
+
+        $summ = 0;
+        while ($data = mysqli_fetch_assoc($q)) {
+
+            $summ += intval($data);
+        }
 
         return $summ;
     }

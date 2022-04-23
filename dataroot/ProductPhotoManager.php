@@ -1,6 +1,8 @@
 <?php
 
-require_once './tools.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/tools.php');
+
+
 
 class ProductPhotoManager
 {

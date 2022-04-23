@@ -1,6 +1,6 @@
 <?php
 
-require_once './staticmethod/static.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/staticmethod/static.php');
 
 // require_once './dataroot/OrderItem.php';
 
@@ -19,6 +19,40 @@ class OrderRent
         $this->is_returned = $returnbool;
     }
 
+    function save()
+    {
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+
+        $sql = "UPDATE order_rent SET user_fk=$this->user_fk , invoice =$this->invoice , is_completed =$this->is_completed , is_returned = $this->is_completed WHERE id = $this->id";
+
+        $q = mysqli_query($CONNECTION, $sql);
+
+        if ($q) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    function get_items()
+    {
+
+        $CONNECTION = mysqli_connect('localhost', 'root', '', 'gshop');
+
+        $sql = "SELECT * FROM orderitem_rent WHERE order_fk = $this->id";
+
+        $q = mysqli_query($CONNECTION, $sql);
+
+        $arr = [];
+
+        while ($data = mysqli_fetch_assoc($q)) {
+
+            $arr[] = new OrderItemRent($data['id'], $data['order_fk'], $data['product_fk'], $data['year'], $data['month'], $data['day']);
+        }
+
+        return $arr;
+    }
 
     function check_variant($variant_id, $time)
     {
@@ -164,13 +198,9 @@ class OrderRent
 
         $totalprice = 0;
 
-        while ($data = mysqli_fetch_assoc($q)) {
+        foreach (self::get_items() as $ordi) {
 
-            // var_dump($data);
-
-            // echo "<br><br><br><br><br>";
-
-            $totalprice += intval($data['priceperday']) * intval($data['quantity']);
+            $totalprice += $ordi->get_total_price();
         }
 
         return $totalprice;
