@@ -1,6 +1,6 @@
 <?php
 
-require_once './staticmethod/static.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop/staticmethod/static.php');
 
 // require_once './dataroot/OrderItem.php';
 
@@ -198,13 +198,9 @@ class OrderRent
 
         $totalprice = 0;
 
-        while ($data = mysqli_fetch_assoc($q)) {
+        foreach (self::get_items() as $ordi) {
 
-            // var_dump($data);
-
-            // echo "<br><br><br><br><br>";
-
-            $totalprice += intval($data['priceperday']) * intval($data['quantity']);
+            $totalprice += $ordi->get_total_price();
         }
 
         return $totalprice;

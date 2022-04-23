@@ -1,7 +1,20 @@
 <?php
 
+spl_autoload_register(function ($class) {
 
-// if(isset)
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/impproject/gshop' .  '//dataroot/' . $class . '.php');
+});
+
+
+
+if (isset($_GET['pid'])) {
+
+
+    $pobj = ProductRentManager::get($_GET['pid']);
+} else {
+
+    header("location: http://localhost/impproject/gshop/where.php");
+}
 
 
 ?>
