@@ -48,7 +48,6 @@ class UserManager
                 alert("Enter your gender");
             }
 
-
             if ($createuserOK) {
 
                 $hashed = password_hash($password, PASSWORD_DEFAULT);

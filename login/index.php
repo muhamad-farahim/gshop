@@ -1,3 +1,12 @@
+<?php 
+include '../staticmethod/static.php';
+
+
+if(isset($_POST['submit'])){
+ Authentication::login();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,11 +80,12 @@
                     <div class="col-12 col-lg-4 offset-lg-4 card px-3 px-lg-5 px-sm-5">
                         <h1 class="text-center mt-5" style="font-weight: 750;">Login</h1>
                         <div class="input mb-lg-2 mb-3 ">
+                            <form action="" method="post">
                             <label for="country" class="signupp-label my-3"
                                 style="font-weight: 500; font-size: 20px;">E-Mail</label>
                             <div class="signupp__inputbox p-2">
                                 <i class="fa-solid fa-envelope signupp__icon"></i>
-                                <input type="text" id="country" placeholder="Enter Your Email">
+                                <input type="text" name="email" id="country" placeholder="Enter Your Email">
                             </div>
                         </div>
 
@@ -84,12 +94,13 @@
                                 style="font-weight: 500; font-size: 20px;">Password</label>
                             <div class="signupp__inputbox p-2">
                                 <i class="fa-solid fa-lock"></i>
-                                <input type="password" id="password" placeholder="Enter Your password">
+                                <input type="password" id="password" name="password" placeholder="Enter Your password">
                             </div>
                         </div>
                         <div class="col-2">
-                            <a href="./products/"><button class="btn-lg btn-primary">Submit</button></a>
+                            <input type="submit" name="submit" class="btn-lg btn-primary"></input>
                         </div>
+                        </form>
                         <div class="col-12 my-5 pb-4">
                             <a href="./signup/">Dont have an account ? Sign Up</a>
                         </div>

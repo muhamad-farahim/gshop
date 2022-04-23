@@ -1,3 +1,14 @@
+<?php 
+include '../staticmethod/static.php';
+
+
+if(isset($_POST['submit'])){
+ Authentication::signup();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,7 +81,7 @@
                         <div class="row">
 
                             <div class="col-12 col-md-6 signup-str-border">
-
+                               <form action="" method="post">
                                 <div class="card-title text-center my-4">
                                     <h1>Login Info</h1>
                                 </div>
@@ -81,7 +92,7 @@
                                         <label for="country" class="signupp-label my-3">E-Mail</label>
                                         <div class="signupp__inputbox p-3">
                                             <i class="fa-solid fa-envelope signupp__icon"></i>
-                                            <input type="text" id="country" placeholder="Enter Your Email">
+                                            <input type="text" id="country" name="email" placeholder="Enter Your Email">
                                         </div>
                                     </div>
 
@@ -89,14 +100,14 @@
                                         <label for="password" class="signupp-label my-3">Password</label>
                                         <div class="signupp__inputbox p-3">
                                             <i class="fa-solid fa-lock"></i>
-                                            <input type="password" id="password" placeholder="Enter Your password">
+                                            <input type="password" name="password" id="password" placeholder="Enter Your password">
                                         </div>
                                     </div>
                                     <div class="input mb-5">
                                         <label for="password_confirm" class="signupp-label my-3">Confirm</label>
                                         <div class="signupp__inputbox p-3">
                                             <i class="fa-solid fa-lock"></i>
-                                            <input type="password" id="password_confurm"
+                                            <input type="password" name="re_password" id="password_confurm"
                                                 placeholder="Renter Your password">
                                         </div>
                                     </div>
@@ -116,7 +127,7 @@
                                         <label for="name" class="signupp-label my-3">Name</label>
                                         <div class="signupp__inputbox p-3">
                                             <i class="fa-solid fa-envelope signupp__icon"></i>
-                                            <input type="text" id="name" placeholder="Enter Your name address">
+                                            <input type="text" name="name" id="name" placeholder="Enter Your name address">
                                         </div>
                                     </div>
 
@@ -124,14 +135,14 @@
                                         <label for="phone" class="signupp-label my-3">Phone Number</label>
                                         <div class="signupp__inputbox p-3">
                                             <i class="fa-solid fa-phone"></i>
-                                            <input type="number" id="phone" placeholder="Enter Your phone number">
+                                            <input type="number" name="phone" id="phone" placeholder="Enter Your phone number">
                                         </div>
                                     </div>
                                     <div class="input mb-5">
                                         <label for="password_confirm" class="signupp-label my-3">Gender</label>
                                         <div class="signupp__inputbox p-1">
                                             <i class="fa-solid fa-genderless"></i>
-                                            <select class="form-control" name="" id="">
+                                            <select class="form-control" name="gender" id="">
                                                 <option selected hidden value="">Select Gender</option>
                                                 <option value="male">Male</option>
                                                 <option value="female">Female</option>
@@ -169,20 +180,20 @@
                                         <div class="input mb-5">
                                             <label for="country" class="signupp-label my-3">Country</label>
                                             <div class="signupp__inputbox p-3">
-                                                <input type="text" id="email" placeholder="Enter Country">
+                                                <input type="text" name="country" id="email" placeholder="Enter Country">
                                             </div>
                                         </div>
 
                                         <div class="input mb-5">
                                             <label for="province" class="signupp-label my-3">Province</label>
                                             <div class="signupp__inputbox p-3">
-                                                <input type="text" id="province" placeholder="Enter province">
+                                                <input type="text" name="province" id="province" placeholder="Enter province">
                                             </div>
                                         </div>
                                         <div class="input mb-5">
                                             <label for="City" class="signupp-label my-3">City</label>
                                             <div class="signupp__inputbox p-3">
-                                                <input type="text" id="City" placeholder="Enter City">
+                                                <input type="text" name="city" id="City" placeholder="Enter City">
                                             </div>
                                         </div>
                                     </div>
@@ -199,7 +210,7 @@
                                         <div class="input mb-5">
                                             <label for="postal_code" class="signupp-label my-3">Postal Code</label>
                                             <div class="signupp__inputbox p-3">
-                                                <input type="text" id="postal_code" placeholder="Enter postal_code">
+                                                <input name="postalcode" type="text" id="postal_code" placeholder="Enter postal_code">
                                             </div>
                                         </div>
 
@@ -211,9 +222,9 @@
 
 
                                         <div class="d-flex justify-content-end">
-                                            <a href="./products/"><button class="btn-lg btn-primary">Submit</button></a>
+                                            <input type="submit" name="submit" class="btn-lg btn-primary"></input>
                                         </div>
-
+                                        </form>
                                     </div>
 
                                 </div>
